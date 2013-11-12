@@ -11,6 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require turbolinks
+//= require bootstrap
+//= require paloma
 //= require_tree .
+
+$.ajaxSetup({
+  beforeSend: function(xhr) {
+    xhr.setRequestHeader("Accept", "text/javascript");
+  }
+});
